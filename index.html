@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ShopSmart | E-Commerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="top">
+      Free shipping on orders over ₹999 • Easy 7-day returns
+    </div>
+    <header>
+      <nav class="nav">
+        <a class="logo" href="#">Shop<span>Smart</span></a>
+        <button class="hamb" id="hamb">☰</button>
+        <div class="links" id="links">
+          <a href="#home">Home</a><a href="#shop">Shop</a
+          ><a href="#categories">Categories</a><a href="#about">About</a
+          ><a href="#contact">Contact</a>
+        </div>
+        <div class="actions">
+          <button id="searchBtn">⌕</button
+          ><button id="cartBtn">🛒 <b id="count">0</b></button>
+        </div>
+      </nav>
+    </header>
+    <div class="search" id="search">
+      <input id="searchInput" placeholder="Search products..." /><button
+        id="closeSearch"
+      >
+        ✕
+      </button>
+    </div>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="wrap heroGrid">
+          <div>
+            <small>NEW SEASON • 2026</small>
+            <h1>Shop smart.<br /><span>Live better.</span></h1>
+            <p>
+              Discover quality products, everyday essentials and modern
+              styles—all in one place.
+            </p>
+            <a class="btn" href="#shop">Shop Now →</a>
+          </div>
+          <div class="heroArt">
+            <div class="circle"></div>
+            <div class="card">NEW<br />ARRIVALS</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="categories">
+        <div class="wrap">
+          <small>EXPLORE</small>
+          <h2>Shop by category</h2>
+          <div class="cats">
+            <button data-cat="Electronics">
+              🎧<b>Electronics</b><em>Smart tech</em>
+            </button>
+            <button data-cat="Fashion">
+              👕<b>Fashion</b><em>Everyday style</em>
+            </button>
+            <button data-cat="Home">
+              🏠<b>Home & Living</b><em>For your space</em>
+            </button>
+            <button data-cat="Accessories">
+              ⌚<b>Accessories</b><em>Complete your look</em>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shop" id="shop">
+        <div class="wrap">
+          <div class="head">
+            <div>
+              <small>OUR COLLECTION</small>
+              <h2>Featured products</h2>
+            </div>
+            <div>
+              <select id="cat">
+                <option>All</option>
+                <option>Electronics</option>
+                <option>Fashion</option>
+                <option>Home</option>
+                <option>Accessories</option>
+              </select>
+              <select id="sort">
+                <option value="featured">Featured</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+                <option value="rating">Top Rated</option>
+              </select>
+            </div>
+          </div>
+          <div class="products" id="products"></div>
+          <p class="empty" id="empty">No products found.</p>
+        </div>
+      </section>
+
+      <section class="promo">
+        <div class="wrap promoIn">
+          <div>
+            <small>LIMITED OFFER</small>
+            <h2>20% off your first order.</h2>
+            <p>Use code <b>WELCOME20</b> at checkout.</p>
+          </div>
+          <a class="light" href="#shop">Start Shopping</a>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="wrap aboutGrid">
+          <div>
+            <small>WHY SHOPEASE?</small>
+            <h2>Made for a simpler way to shop.</h2>
+            <p>
+              Useful products, transparent pricing and a smooth shopping
+              experience. This frontend is built entirely with HTML5, CSS3 and
+              vanilla JavaScript.
+            </p>
+          </div>
+          <div class="benefits">
+            <article>
+              🚚
+              <div>
+                <b>Fast delivery</b>
+                <p>Reliable shipping for your orders.</p>
+              </div>
+            </article>
+            <article>
+              🔒
+              <div>
+                <b>Secure checkout</b>
+                <p>Ready to connect to a payment gateway.</p>
+              </div>
+            </article>
+            <article>
+              ↩️
+              <div>
+                <b>Easy returns</b>
+                <p>Simple return experience.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter" id="contact">
+        <div class="wrap news">
+          <div>
+            <small>STAY UPDATED</small>
+            <h2>Get offers in your inbox.</h2>
+          </div>
+          <form id="newsForm">
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            /><button class="btn">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap foot">
+        <div>
+          <a class="logo" href="#">Shop<span>Ease</span></a>
+          <p>Modern e-commerce frontend with HTML, CSS & JavaScript.</p>
+        </div>
+        <div>
+          <b>Shop</b><a href="#shop">Products</a
+          ><a href="#categories">Categories</a>
+        </div>
+        <div><b>Help</b><a href="#">Shipping</a><a href="#">Returns</a></div>
+        <div>
+          <b>Contact</b
+          ><a href="mailto:hello@shopease.example">hello@shopease.example</a
+          ><a href="#">India</a>
+        </div>
+      </div>
+      <div class="copy">© <span id="year"></span> ShopEase</div>
+    </footer>
+
+    <div class="overlay" id="overlay"></div>
+    <aside class="drawer" id="drawer">
+      <div class="drawerHead">
+        <h2>Your Cart</h2>
+        <button id="closeCart">✕</button>
+      </div>
+      <div class="items" id="items"></div>
+      <div class="cartFoot">
+        <div><span>Subtotal</span><b id="subtotal">₹0</b></div>
+        <div><span>Shipping</span><span id="shipping">₹0</span></div>
+        <div class="total"><b>Total</b><b id="total">₹0</b></div>
+        <button class="btn full" id="checkout">Proceed to Checkout</button
+        ><small>Demo checkout — connect your backend/payment gateway.</small>
+      </div>
+    </aside>
+
+    <div class="modal" id="modal">
+      <div class="modalBox">
+        <button class="x" id="modalClose">✕</button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+    <div class="toast" id="toast"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
